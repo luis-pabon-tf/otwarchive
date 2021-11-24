@@ -26,7 +26,7 @@ class FandomsController < ApplicationController
       redirect_to media_path(notice: "Please choose a media category to start browsing fandoms.")
       return
     end
-    @fandoms_by_letter = @fandoms.group_by {|f| f.sortable_name[0].upcase}
+    @fandoms_by_letter = @fandoms.group_by {|f| f.sortable_name[0].upcase if f.sortable_name.present?}
   end
 
   def show
