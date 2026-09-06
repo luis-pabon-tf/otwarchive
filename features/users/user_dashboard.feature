@@ -321,6 +321,6 @@ Feature: User dashboard
     And I should not see "Work One" within "#user-bookmarks"
     And I should see "Work Six" within "#user-bookmarks"
   When I go to the dashboard page for user "meatloaf" with pseud "meatloaf"
-    And I should see "Recent bookmarks"
+  Then I should see "Recent bookmarks"
     And I should not see "Work One" within "#user-bookmarks"
     And I should see "Work Six" within "#user-bookmarks"
